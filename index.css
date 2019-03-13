@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+/* mobiel formaat */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+	margin: 0 auto;
+	font-family: Arial, sans-serif;
+	display: grid;
+	grid-template-colums: 1fr 1fr;
+	grid-template-areas:
+			"header header"
+			"ad1 ad1"
+			"main main"
+            "ad2 ad2";
+}
+
+/*Titel: Time on earth*/
+h1 {
+    font-family: Orbitron;
+    font-size: 40px;
+    padding-bottom: 20px;
+    text-align: center
+}
+
+/*Text: Amsterdam, The Netherlands*/
+p {
+    font-family: Orbitron;
+    text-align: center;
+    color: orange;
+}
+
+.header{ 
+    width: 100%;
+	grid-area: header;
+}
+
+/*logo*/
+.logo {
+	width: 100%;
+	display: left;
+	margin: 0 auto;
+	padding: 10px;
+    padding-bottom: 30px;
+}
+
+/*vak waar de klok in staat*/
+.main{
+	grid-area: main;
+	margin: 0 auto;
+	display: block;
+	margin-top: 10px;
+}
+
+/*datum*/
+#datum {
+	font-size: 1.8em;
+	font-family: Orbitron;
+}
+
+/*vak waar datum in staat*/
+.ad1 {
+	grid-area: ad1;
+    padding: 0px 0px 20px 20px;
+    margin: 0;
+    font-size: 30px;
+    font-family: Orbitron;
+}
+
+/*vak waar de afbeelding maan/zon in staat*/
+.ad2 {
+	grid-area: ad2;
+	margin: 0 auto;
+	display: block;
+	margin-top: 80px;
+}
+
+/*opmaak van de afbeeldingen maan en zon*/
+#maan-zon {
+	width: 300px;
+	height: 300px;
+	background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+/*klok*/
+#klok {
+/*  background-image: linear-gradient(#63DEFF, #A8BFDB, #DA97AB, #BD7EAC, #8166A2, #584C8C);*/
+    background: url("aarde.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+    border-color: black;
+	box-shadow: 0 0 50px 0 white;
+	position: relative;
+    margin: 20px;
+}
+
+/*uren wijzer*/
+#hrs-wijzer{
+	width: 4px;
+	height: 25%;
+	background-color: white;
+	transform-origin: 50% 80%;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	margin-left: -2px;
+	border-radius: 100%;
+}
+
+/*minuten wijzer*/
+#min-wijzer{
+	width: 3px;
+	height: 40%;
+	background-color: white;
+	transform-origin: 50% 80%;
+	position: absolute;
+	top: 18%;
+	left: 50%;
+	margin-left: -1px;
+	border-radius: 100%;
+}
+
+/*seconde wijzer*/
+#sec-wijzer{
+	width: 1px;
+	height: 50%;
+	background-color: white;
+	transform-origin: 50% 80%;
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	border-radius: 100%;
+}
+
+/*nummers op de klok */
+.num{
+	height: 100%;
+	position: absolute;
+	left: calc(50% - 0.5em);
+}
+
+.num div {
+	width: 0.8em;
+	line-height: 2.4em;
+	color: white;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 1em;
+}
+
+.num1 {
+	transform: rotate(30deg);
+}
+
+.num1 div {
+	transform: rotate(-30deg);
+}
+
+.num2 {
+	transform: rotate(60deg);
+}
+
+.num2 div {
+	transform: rotate(-60deg);
+}
+
+.num3 {
+	transform: rotate(90deg);
+}
+
+.num3 div {
+	transform: rotate(-90deg);
+}
+
+.num4 {
+	transform: rotate(120deg);
+}
+
+.num4 div {
+	transform: rotate(-120deg);
+}
+
+.num5 {
+	transform: rotate(150deg);
+}
+
+.num5 div {
+	transform: rotate(-150deg);
+}
+
+.num6 {
+	transform: rotate(180deg);
+}
+
+.num6 div {
+	transform: rotate(-180deg);
+}
+
+.num7 {
+	transform: rotate(210deg);
+}
+
+.num7 div {
+	transform: rotate(-210deg);
+}
+
+.num8 {
+	transform: rotate(240deg);
+}
+
+.num8 div {
+	transform: rotate(-240deg);
+}
+
+.num9 {
+	transform: rotate(270deg);
+}
+
+.num9 div {
+	transform: rotate(-270deg);
+}
+
+.num10 {
+	transform: rotate(300deg);
+}
+
+.num10 div {
+	transform: rotate(-300deg);
+}
+
+.num11 {
+	transform: rotate(330deg);
+}
+
+.num11 div {
+	transform: rotate(-330deg);
+}
+
+.num12 {
+	transform: rotate(360deg);
+}
+
+.num12 div {
+	transform: rotate(-360deg);
+}
+
+
+/* Tablet formaat */
+@media only screen and (min-width: 640px){
+    body {
+	display: grid;
+	grid-template-colums: 1fr 1fr 1fr;
+	grid-template-areas:
+			"header header header"
+			"ad1 ad1 a1"
+            "main main ad2";
+	}
+    
+    /*logo*/
+	.logo {
+		width: 40%;
+        padding-left: 30px;
+        padding-bottom: 10px;
+	}
+
+    /*vak waar datum in staat*/
+	.ad1 {
+		margin-top: 10px;
+        text-align: left;
+        font-size: 25px;
+	}
+
+    /*vak waar de afbeelding maan/zon in staat*/
+	.ad2 {
+		margin-top: 100px;
+	}
+    
+    /*klok*/
+	#klok {
+		width: 280px;
+		height: 280px;
+	}
+    
+    /*opmaak van de afbeeldingen maan en zon*/
+	#maan-zon {
+		width: 300px;
+		height: 300px;
+        padding: 40px;
+	}
+}
+
+/* klein desktop */
+@media screen and (min-width: 1024px) {
+	body {
+	display: grid;
+	grid-template-colums: 1fr 1fr 1fr;
+	grid-template-areas:
+			"header header header"
+			"ad1 ad1 a1"
+            "ad2 main main";
+	}
+	
+    /*datum*/
+	#datum {
+		font-size: 2em;
+	}
+
+    /*vak waar datum in staat*/
+	.ad1 {
+        font-size: 25px;
+		margin-top: 30px;
+	}
+    
+    /*klok*/
+	#klok {
+		width: 400px;
+		height: 400px;
+	}
+
+	.num div {
+		font-size: 1.2em;
+	}
+    
+    /*opmaak van de afbeeldingen maan en zon*/
+	#maan-zon {
+		width: 400px;
+		height: 400px;
+	}
+}
+
+/* desktop groot */
+@media screen and (min-width: 1440px) {
+   body {
+	display: grid;
+	grid-template-colums: 1fr 1fr 1fr;
+	grid-template-areas:
+			"header header header"
+			"ad1 ad1 a1"
+            "ad2 main main";
+	}
+    
+    /*logo*/
+	.logo {
+		width: 400px;
+	}
+    
+    /*datum*/
+	#datum {
+		font-size: 2.6em;
+	}
+    
+    /*klok*/
+	#klok {
+		width: 400px;
+		height: 400px;
+	}
+
+	.num div {
+		font-size: 1.4em;
+	}
+    
+    /*opmaak van de afbeeldingen maan en zon*/
+	#maan-zon {
+		width: 400px;
+        height: 400px;
+	}
+}
