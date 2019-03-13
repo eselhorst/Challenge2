@@ -50,9 +50,6 @@ function updateKlok(date){
 //animatie zon en maan (rond draaien)
 TweenMax.to("#maan-zon", 120, {rotation:260,ease:Power0.easeNone,repeat:-1 });
 
-//animatie zon en maan (rond draaien)
-TweenMax.to("#maan-zon", 120, {rotation:260,ease:Power0.easeNone,repeat:-1 });
-
 //animatie klok van boven naar beneden
 function animatie(){
     var timeline = new TimelineMax ({repeat:-1});
